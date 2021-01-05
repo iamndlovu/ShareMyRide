@@ -9,6 +9,8 @@ body {
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	line-height: 1.6rem;
 	font-size: 1.1rem;
+	width: 100vw;
+	overflow-x: hidden;
 }
 
 h1,
@@ -18,4 +20,8 @@ h4,
 h5,
 h5 {
 	font-weight: 400;
+}
+
+.offscreen {
+	transform: translate(-200%, -200%);
 }
