@@ -1,0 +1,36 @@
+:root {
+	--primaryBackground: #333;
+	--secondeyBackground: #c1c1c1;
+	--primaryText: aliceblue;
+	--secondaryText: black;
+	--activeText: darkgray;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-weight: 300;
+}
+
+body {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.6rem;
+	font-size: 1.1rem;
+	width: 100vw;
+	overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+	font-weight: 400;
+}
+
+.offscreen {
+	position: absolute;
+	transform: translate(-200%, -200%);
+}
