@@ -1,0 +1,6 @@
+footer {
+	height: 5rem;
+	overflow: hidden;
+	background: var(--secondeyBackground);
+	color: var(--secondaryText);
+}
