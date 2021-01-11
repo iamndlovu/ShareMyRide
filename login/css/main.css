@@ -1,0 +1,145 @@
+header {
+	background: #ecf0f3;
+	height: 8rem;
+	padding: 2rem;
+}
+
+h1 {
+	margin-bottom: 1.4rem;
+}
+
+.super-container {
+	background: #ecf0f3;
+	display: flex;
+	flex-direction: row-reverse;
+	min-height: calc(100vh - 5rem - 8rem);
+}
+
+aside {
+	width: 20vw;
+	padding-left: 2.04rem;
+	display: flex;
+	align-items: center;
+}
+
+.aside-nav-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.aside-nav-item {
+	padding: 0;
+	margin: 0;
+	font-weight: 400;
+	font-size: 1.5rem;
+	margin-bottom: 3rem;
+}
+
+main {
+	width: 80vw;
+	min-height: 100%;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+}
+
+.login-form {
+	width: 320px;
+	height: 500px;
+	padding: 40px;
+	border-radius: 20px;
+	background: #ecf0f3;
+	/****************/
+	box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px #fff;
+}
+
+.logo-container {
+	display: grid;
+	align-content: center;
+	justify-content: center;
+}
+
+.logo-container .logo {
+	color: var(--secondaryText);
+	text-decoration: none;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	font-size: 2rem;
+	height: 85px;
+	width: 85px;
+	border-radius: 50%;
+	/****************/
+	box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px #fff;
+}
+
+.logo-container .logo:active {
+	box-shadow: inset 6px 6px 10px #cbced1, inset -6px -6px 10px #fff;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2rem;
+	width: 100%;
+}
+
+input {
+	border-color: transparent;
+	background: #ecf0f3;
+	padding-left: 1rem;
+}
+
+input:focus {
+	outline: 0;
+}
+
+input {
+	display: flex;
+	align-items: center;
+	background: #ecf0f3;
+	height: 50px;
+	width: 90%;
+	font-size: 14px;
+	border-radius: 50px;
+	/****************/
+	box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px #fff;
+	transition: all 0.3s ease-out;
+}
+
+input:focus {
+	background-color: var(--secondaryBackground);
+}
+
+.forgot,
+.register {
+	margin-top: 16px;
+	width: 90%;
+}
+
+.submit.form-group > div {
+	width: 90%;
+}
+
+.submit button {
+	cursor: pointer;
+	color: var(--primaryText);
+	background: var(--primaryBackground);
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	box-shadow: 6px 6px 6px var(--secondaryBackground);
+	border-radius: 5px;
+	letter-spacing: 2px;
+	font-size: 1.2rem;
+	width: 86px;
+	height: 36px;
+	transition: all 0.3s ease-out;
+}
+
+.submit button:hover {
+	box-shadow: none;
+}

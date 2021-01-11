@@ -20,8 +20,6 @@ header {
 }
 
 .home-menu .logo {
-	font-family: cursive;
-	font-style: italic;
 	color: var(--activeText);
 }
 
