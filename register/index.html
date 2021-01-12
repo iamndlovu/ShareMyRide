@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Register - Share My Ride</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+			integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./css/index.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Welcome back to Share My Ride</h1>
+			<h2>log in to your account to continue</h2>
+		</header>
+
+		<div class="super-container">
+			<main>
+				<form action="#" method="post" class="login-form">
+					<div class="logo-container">
+						<a href="./../" class="logo">SMR</a>
+					</div>
+
+					<div class="form-group">
+						<label for="email-phone" class="offscreen">
+							Enter your email address or phone number.
+						</label>
+						<input
+							type="text"
+							name="email-phone"
+							id="email-phone"
+							placeholder="Email or Phone"
+							required
+						/>
+					</div>
+
+					<div class="form-group">
+						<label for="password" class="offscreen">Enter your password.</label>
+						<input
+							type="password"
+							name="password"
+							id="password"
+							placeholder="Choose password"
+							required
+						/>
+					</div>
+
+					<div class="submit form-group">
+						<div><button type="submit">Submit</button></div>
+						<div class="register">
+							<a href="./../login" class="register-link">
+								Already have an acoount? Login.
+							</a>
+						</div>
+					</div>
+				</form>
+			</main>
+
+			<aside>
+				<nav>
+					<ul class="aside-nav-list">
+						<li class="aside-nav-item">
+							<a href="./../"> Home </a>
+						</li>
+						<li class="aside-nav-item">
+							<a href="./../about"> About </a>
+						</li>
+						<li class="aside-nav-item">
+							<a href="./../login"> Login </a>
+						</li>
+					</ul>
+				</nav>
+			</aside>
+		</div>
+
+		<footer>
+			<div class="container">
+				<nav class="sub-nav">
+					<ul class="nav-items">
+						<li class="nav-item">
+							<a href="./../about/" class="nav-link">about</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">terms of service</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">privacy policy</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">faq</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">blog</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">help center</a>
+						</li>
+					</ul>
+				</nav>
+				<section class="copy">
+					<p>&copy; <span class="year"></span> Share My Ride</p>
+				</section>
+			</div>
+		</footer>
+
+		<script>
+			document.querySelector(
+				"span.year"
+			).textContent = ` ${new Date().getFullYear()} `;
+		</script>
+
+		<script src="./js/form.js"></script>
+	</body>
+</html>
