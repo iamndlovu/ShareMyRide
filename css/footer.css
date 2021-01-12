@@ -29,6 +29,7 @@ footer .container {
 	text-decoration: underline;
 }
 
-.copy p {
+.copy p,
+.copy span {
 	font-weight: 500;
 }

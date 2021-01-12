@@ -106,9 +106,14 @@
 					</ul>
 				</nav>
 				<section class="copy">
-					<p>&copy; 2021 Share My Ride</p>
+					<p>&copy; <span class="year"></span> Share My Ride</p>
 				</section>
 			</div>
 		</footer>
+		<script>
+			document.querySelector(
+				"span.year"
+			).textContent = ` ${new Date().getFullYear()} `;
+		</script>
 	</body>
 </html>

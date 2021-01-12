@@ -102,10 +102,15 @@
 					</ul>
 				</nav>
 				<section class="copy">
-					<p>&copy; 2021 Share My Ride</p>
+					<p>&copy; <span class="year"></span> Share My Ride</p>
 				</section>
 			</div>
 		</footer>
+		<script>
+			document.querySelector(
+				"span.year"
+			).textContent = ` ${new Date().getFullYear()} `;
+		</script>
 		<video class="background-video" aria-hidden="true" autoplay loop muted>
 			<source src="./vid/traffic.mp4" type="video/mp4" />
 		</video>
