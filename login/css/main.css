@@ -88,29 +88,22 @@ main {
 }
 
 input {
-	border-color: transparent;
-	background: #ecf0f3;
-	padding-left: 1rem;
-}
-
-input:focus {
-	outline: 0;
-}
-
-input {
 	display: flex;
 	align-items: center;
 	background: #ecf0f3;
+	border-color: transparent;
 	height: 50px;
 	width: 90%;
 	font-size: 14px;
 	border-radius: 50px;
+	padding-left: 1rem;
 	/****************/
 	box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px #fff;
 	transition: all 0.3s ease-out;
 }
 
 input:focus {
+	outline: 0;
 	background-color: var(--secondaryBackground);
 }
 

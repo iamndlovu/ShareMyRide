@@ -1,0 +1,50 @@
+form {
+	position: relative;
+}
+
+div.form-group {
+	top: 200px;
+	left: 10%;
+	position: absolute;
+	transition: all 0.3s ease-out;
+	width: 80%;
+}
+
+.form-group.right {
+	transform: translate(100%, 0);
+	z-index: -2;
+}
+
+.form-group.current {
+	transform: translate(0, 0);
+}
+
+.form-group.left {
+	transform: translate(-100%, 0);
+	z-index: -2;
+}
+
+.form-controls {
+	display: flex;
+	justify-content: space-around;
+	position: absolute;
+	width: 80%;
+	left: 10%;
+	bottom: 100px;
+}
+
+.form-controls > div {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid var(--secondaryBackground);
+	border-radius: 17px;
+	height: 2rem;
+	width: 3rem;
+	box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px #fff;
+}
+
+.form-controls > div:active {
+	box-shadow: inset 7px 7px 10px #cbced1, inset -7px -7px 10px #fff;
+}
