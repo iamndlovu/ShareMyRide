@@ -51,31 +51,86 @@ const handlePrevButtonClick = () => {
 
 //validate current input
 const validate = input => {
+  const parent = input.parentElement;
   const value = input.value;
   const type = input.type;
   const length = value.length;
+  const errorContainer = document.createElement('p');
+  errorContainer.className = 'error';
 
-  if (length == 0) return false;
+  if (document.querySelector('.error'))
+    parent.removeChild(document.querySelector('.error'));
+
+  parent.appendChild(errorContainer);
+
+  if (length === 0) {
+    errorContainer.textContent = 'This field is required';
+    return false;
+  }
 
   else if (type == 'email') {
     if (
       value.indexOf('@') < 1 ||
       value.indexOf('@') > length - 2 ||
       value.indexOf('@') !== value.lastIndexOf('@')
-    ) return false;
+    ) {
+      errorContainer.textContent = 'Please provide a valid email address';
+      return false;
+    };
   }
-  console.log(value.lastIndexOf('7'));
+
+  else if (type == 'text') {
+    if (length < 2) {
+      errorContainer.textContent = 'Uhmmm... this seems too short';
+      return false;
+    }
+  }
+
+  if (type == 'date' && input.name == 'dob' ) {
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    const currentMonth = (currentDate.getMonth() + 1);
+    const currentDay = currentDate.getDate();
+    const userYear = Number(value.slice(0, 4));
+    const userMonth = Number(value.slice(5, 7));
+    const userDay = Number(value.slice(8));
+
+    if (
+      ((currentYear - userYear) < 16) ||
+      (((currentYear - userYear) == 16) && (userMonth > currentMonth)) ||
+      ((((currentYear - userYear) == 16) && (userMonth == currentMonth)) && (userDay > currentDay))
+      ) {
+        errorContainer.textContent = 'You must be at least 16 years to register';
+        return false;
+      }
+
+      else if ((currentYear - userYear) > 100) {
+        errorContainer.textContent = `Are you sure you are ${currentYear - userYear} years old🤔`;
+        return false;
+      }
+
+  }
+
+  input.classList.remove('danger');
+  input.classList.add('success');
+  parent.removeChild(errorContainer);
   return true;
 };
 
 //handleFormControlClick
 const handleFormControlClick = (e) => {
-  let targetElement = e.target;
+  const targetElement = e.target;
+  const input = document.querySelector('.current input');
   switch (targetElement) {
     case nextButton:
       if (right.length < 1) return;
-      if (validate(document.querySelector('.current input')))
+      if (validate(input))
         handleNextButtonClick();
+      else {
+        input.classList.add('danger');
+        input.classList.remove('success');
+        input.focus();
+      }
       //console.log('next');
       break;
 
