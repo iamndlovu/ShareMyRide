@@ -28,6 +28,14 @@ div.form-group {
 	color: crimson;
 }
 
+.form-group.current .error {
+	color: crimson;
+	font-size: 0.9rem;
+	text-align: center;
+	width: 100%;
+	margin-top: 1.3rem;
+}
+
 .form-group input.success {
 	border: 4px solid rgba(33, 168, 123, 0.3);
 }
