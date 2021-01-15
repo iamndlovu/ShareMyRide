@@ -26,40 +26,190 @@
 						<a href="./../" class="logo">SMR</a>
 					</div>
 
+					<!-------------------- 
+					 |	personal details |
+					 -------------------->
+					<!-- first name -->
 					<div class="form-group">
-						<label for="email-phone" class="offscreen">
-							Enter your email address or phone number.
+						<label for="first-name" class="offscreen">
+							Enter your first name.
 						</label>
 						<input
 							type="text"
-							name="email-phone"
-							id="email-phone"
-							placeholder="Email or Phone"
+							name="first-name"
+							id="first-name"
+							placeholder="First Name"
 							required
 						/>
 					</div>
 
+					<!-- last name -->
 					<div class="form-group">
-						<label for="password" class="offscreen">Enter your password.</label>
+						<label for="last-name" class="offscreen">
+							Enter your last name(s).
+						</label>
+						<input
+							type="text"
+							name="last-name"
+							id="last-name"
+							placeholder="last Name(s)"
+							required
+						/>
+					</div>
+
+					<!-- date of birth -->
+					<div class="form-group">
+						<label for="date-of-birth">Date Of Birth</label>
+						<input type="date" name="date-of-birth" id="date-of-birth" />
+					</div>
+
+					<!-- Gender -->
+					<div class="form-group radio-container">
+						<label>
+							<div class="radio-description">Select your gender</div>
+							<input
+								type="radio"
+								name="gender"
+								value="male"
+								id="male"
+								checked
+								aria-describedby="male-description"
+							/> <div class="male-description">Male</div>
+							<input
+								type="radio"
+								name="gender"
+								value="female"
+								id="female"
+								aria-describedby="female-description"
+							/> <div class="female-description">Female</div>
+						</label>
+						</select>
+					</div>
+
+					<!-------------------- 
+					 |	Geography        |
+					 -------------------->
+					<!-- country -->
+					<div class="form-group">
+						<label for="country">Select your country of residence</label>
+						<select name="country" id="country">
+							<option value="null">-- please select --</option>
+							<option value="zw">Zimbabwe</option>
+						</select>
+					</div>
+
+					<!-- city -->
+					<div class="form-group">
+						<label for="city">Select your city</label>
+						<select name="city" id="city">
+							<option value="null">-- please select --</option>
+							<option value="byo">Bulawayo</option>
+							<option value="gw">Gweru</option>
+							<option value="hre">Harare</option>
+						</select>
+					</div>
+
+					<!-- address -->
+					<div class="form-group">
+						<label for="address" class="offscreen"> Enter your address. </label>
+						<input
+							type="text"
+							name="address"
+							id="address"
+							placeholder="Street Address"
+							required
+						/>
+					</div>
+
+					<!-------------------- 
+					 |	 contact         |
+					 -------------------->
+					<!-- phone -->
+					<div>
+						<label for="phone" class="offscreen">
+							Enter your phone number.
+						</label>
+						<input
+							type="tel"
+							name="phone"
+							id="Phone"
+							placeholder="phone: +263.."
+							required
+						/>
+					</div>
+
+					<!-- email -->
+					<div>
+						<label for="email" class="offscreen">
+							Enter your email address.
+						</label>
+						<input
+							type="email"
+							name="email"
+							id="email"
+							placeholder="Email"
+							required
+						/>
+					</div>
+
+					<!-------------------- 
+					 |	   password      |
+					 -------------------->
+					<!-- choose password -->
+					<div>
+						<label for="password" class="offscreen"> Choose a password. </label>
 						<input
 							type="password"
 							name="password"
 							id="password"
-							placeholder="Choose password"
+							placeholder="Password"
 							required
 						/>
 					</div>
 
-					<div class="form-group">
-						<label for="dob">Date Of Birth</label>
+					<!-- confirm password -->
+					<div>
+						<label for="confirm-password" class="offscreen">
+							Confirm password.
+						</label>
 						<input
-							type="date"
-							name="dob"
-							id="dob"
-							placeholder="Date of birth"
+							type="password"
+							name="confirm-password"
+							id="confirm-password"
+							placeholder="Confirm Password"
+							required
 						/>
 					</div>
 
+					<!-------------------------------- 
+					 |	   car-licence-agreement     |
+					 -------------------------------->
+
+					<div class="form-group agree">
+						<label>
+							<input type="checkbox" name="licence" value="yes" id="licence" />
+							<div class="check-description">I have a Driver's Licence.</div>
+						</label>
+						<label>
+							<input type="checkbox" name="car" value="yes" id="car" />
+							<div class="check-description">I have own a car.</div>
+						</label>
+						<label>
+							<input type="checkbox" name="truth" value="yes" id="truth" />
+							<div class="check-description">
+								All the information provided is true.
+							</div>
+						</label>
+						<label>
+							<input type="checkbox" name="agree" value="yes" id="agree" />
+							<div class="check-description">
+								I agree to Share My Ride's <a href="#">Privacy Policy</a> and
+								<a href="#">Terms of Service</a>.
+							</div>
+						</label>
+					</div>
+
+					<!-- submit -->
 					<div class="submit form-group">
 						<div><button type="submit">Submit</button></div>
 						<div class="register">
