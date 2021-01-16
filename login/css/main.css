@@ -87,7 +87,7 @@ main {
 	width: 100%;
 }
 
-input {
+.form-group > input {
 	display: flex;
 	align-items: center;
 	background: #ecf0f3;

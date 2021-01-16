@@ -3,7 +3,7 @@ form {
 }
 
 div.form-group {
-	top: 200px;
+	top: 160px;
 	left: 10%;
 	position: absolute;
 	transition: all 0.3s ease-out;
@@ -20,7 +20,8 @@ div.form-group {
 	transform: translate(0, 0);
 }
 
-.form-group.current input.danger {
+.form-group.current input.danger,
+.form-group.current select.danger {
 	border: 2px solid crimson;
 }
 
@@ -36,7 +37,8 @@ div.form-group {
 	margin-top: 1.3rem;
 }
 
-.form-group input.success {
+.form-group input.success,
+.form-group select.success {
 	border: 4px solid rgba(33, 168, 123, 0.3);
 }
 
@@ -50,6 +52,34 @@ div.form-group.submit > div {
 	align-content: center;
 	justify-content: center;
 	text-align: center;
+}
+
+div.form-group.radio-container input {
+	width: 20px;
+	height: 20px;
+}
+
+.male-description,
+.female-description {
+	display: inline-block;
+}
+
+select {
+	background: #ecf0f3;
+	border-color: transparent;
+	height: 50px;
+	width: 90%;
+	font-size: 14px;
+	padding-left: 1rem;
+	margin-top: 1rem;
+	/****************/
+	box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px #fff;
+	transition: all 0.3s ease-out;
+}
+
+select:focus {
+	border: transparent;
+	outline: none;
 }
 
 .form-controls {
