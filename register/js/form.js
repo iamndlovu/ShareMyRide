@@ -27,7 +27,8 @@ const showCurrent = () => {
 
 	let input =
 		document.querySelector(".current input") ||
-		document.querySelector(".current button");
+		document.querySelector(".current button") ||
+		document.querySelector(".current select");
 	input.focus();
 };
 
@@ -55,6 +56,8 @@ const handlePrevButtonClick = () => {
 
 //validate current input
 const validate = (input) => {
+	if(right.length < 1) return true;
+
 	const parent = input.parentElement;
 	const value = input.value;
 	const type = input.type;
@@ -112,8 +115,23 @@ const validate = (input) => {
 		}
 	}
 
-	//TODO: Validate(radio, checkbox)
-	//TODO: Validate(password)
+	if (type == 'password') {
+		const confirmPassword = document.querySelector('#confirm-password');
+		const confirmValue = confirmPassword.value;
+		if (length < 8) {
+			errorContainer.textContent = "Password must be at least 8 characters long";
+			return false;
+		}
+		else if (value !== confirmValue) {
+			errorContainer.textContent = "Passwords do not match";
+			confirmPassword.classList.add('danger');
+			return false;
+		}
+		confirmPassword.classList.remove('danger');
+		confirmPassword.classList.add('success');
+	}
+
+	//TODO: validate(TOS, privacyPolicy)
 
 	input.classList.remove("danger");
 	input.classList.add("success");
@@ -124,7 +142,8 @@ const validate = (input) => {
 //handleFormControlClick
 const handleFormControlClick = (e) => {
 	const targetElement = e.target;
-	const input = document.querySelector(".current input");
+	const input = document.querySelector(".current input") ||
+	              document.querySelector(".current select");
 	switch (targetElement) {
 		case nextButton:
 			if (right.length < 1) return;
@@ -138,7 +157,12 @@ const handleFormControlClick = (e) => {
 			break;
 
 		case prevButton:
-			handlePrevButtonClick();
+			if (validate(input)) handlePrevButtonClick();
+			else {
+				input.classList.add("danger");
+				input.classList.remove("success");
+				input.focus();
+			}
 			//console.log('Prev')
 			break;
 
