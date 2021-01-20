@@ -9,13 +9,14 @@ div.form-group {
 	transition: all 0.3s ease-out;
 	width: 80%;
 	display: flex;
-
 	align-items: flex-start;
 }
 
 .form-group.right {
 	transform: translate(100%, 0);
 	z-index: -2;
+	height: 0;
+	overflow: hidden;
 }
 
 .form-group.current {
