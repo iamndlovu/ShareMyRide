@@ -9,6 +9,8 @@ div.form-group {
 	transition: all 0.3s ease-out;
 	width: 80%;
 	display: flex;
+
+	align-items: flex-start;
 }
 
 .form-group.right {
@@ -81,6 +83,10 @@ select {
 select:focus {
 	border: transparent;
 	outline: none;
+}
+
+.check-description {
+	display: inline;
 }
 
 .form-controls {
