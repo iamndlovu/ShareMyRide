@@ -25,7 +25,8 @@ div.form-group {
 	border: 2px solid crimson;
 }
 
-.form-group.current input.danger::placeholder {
+.form-group.current input.danger::placeholder,
+label.danger {
 	color: crimson;
 }
 

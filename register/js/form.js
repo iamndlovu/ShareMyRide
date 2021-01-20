@@ -11,7 +11,7 @@ let left = [],
 	right = [],
 	current;
 
-// hide all formGroups and add to left container
+// hide all formGroups and add to right container
 formGroups.forEach((formGroup) => {
 	formGroup.classList.add("right");
 	right.push(formGroup);
@@ -46,6 +46,9 @@ const handleNextButtonClick = () => {
 const handlePrevButtonClick = () => {
 	if (left.length < 1) return;
 
+	if (document.querySelector(".error"))
+		document.querySelector(".error").parentElement.removeChild(document.querySelector(".error"));
+
 	let prevFormGroup = left.pop();
 	current.classList.remove("current");
 	current.classList.add("right");
@@ -56,9 +59,7 @@ const handlePrevButtonClick = () => {
 
 //validate current input
 const validate = (input) => {
-	if(right.length < 1) return true;
-
-	const parent = input.parentElement;
+	const parent = document.querySelector('.current');
 	const value = input.value;
 	const type = input.type;
 	const length = value.length;
@@ -69,6 +70,28 @@ const validate = (input) => {
 		parent.removeChild(document.querySelector(".error"));
 
 	parent.appendChild(errorContainer);
+
+	//TODO: validate(TOS, privacyPolicy)
+	if(right.length === 1) {
+		const confirmTruth = document.querySelector('.current #truth');
+		const confirmAgree = document.querySelector('.current #agree');	
+
+		if(!confirmTruth.checked) {
+			confirmTruth.classList.add('danger');
+			confirmTruth.parentElement.classList.add('danger');
+			return false;
+		}
+		confirmTruth.classList.remove('danger');
+		confirmTruth.parentElement.classList.remove('danger');
+
+		if(!confirmAgree.checked) {
+			confirmAgree.classList.add('danger');
+			confirmAgree.parentElement.classList.add('danger');
+			return false;
+		}
+		confirmAgree.classList.remove('danger');
+		confirmAgree.parentElement.classList.remove('danger');
+	}
 
 	if (length === 0) {
 		errorContainer.textContent = "This field is required";
@@ -131,11 +154,18 @@ const validate = (input) => {
 		confirmPassword.classList.add('success');
 	}
 
-	//TODO: validate(TOS, privacyPolicy)
+	if (type == 'tel') {
+		if (value.indexOf('+263') !== 0) {
+			errorContainer.textContent = "Please follow the format: +263xxxxxxxxx";
+			return false;
+		}
+	}
 
+	
 	input.classList.remove("danger");
 	input.classList.add("success");
-	parent.removeChild(errorContainer);
+	if (document.querySelector(".error"))
+		parent.removeChild(errorContainer);
 	return true;
 };
 
@@ -157,7 +187,7 @@ const handleFormControlClick = (e) => {
 			break;
 
 		case prevButton:
-			if (validate(input)) handlePrevButtonClick();
+			if ((right.length < 3) || validate(input)) handlePrevButtonClick();
 			else {
 				input.classList.add("danger");
 				input.classList.remove("success");
@@ -171,15 +201,20 @@ const handleFormControlClick = (e) => {
 	}
 };
 
-//listenForClick(nextButton)
-//validate(current)
-//decision ? showNext : showCurrent
+// handleSubmit(form)
+	// onEnterClick(Next())
 
-//listenForClick(prevButton)
+function handleSubmit(e) {
+	if (!document.querySelector('.current.submit')) {
+		e.preventDefault();
+		nextButton.click();
+	}
+	return true;
+}
 
 document
 	.querySelector(".form-controls")
 	.addEventListener("click", handleFormControlClick);
 
-// TODO: handleSubmit(form)
-	// TODO: onEnterClick(Next())
+	document.forms[0].addEventListener('submit', handleSubmit);
+
