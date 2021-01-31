@@ -1,0 +1,22 @@
+aside {
+	grid-column: 1 / 21;
+}
+
+.side-nav-items {
+	height: 100%;
+	width: 100%;
+}
+
+.side-nav-list {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+
+aside a.logout {
+	font-weight: bold;
+}
