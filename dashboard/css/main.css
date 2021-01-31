@@ -1,0 +1,34 @@
+main {
+	grid-column: 21 / -1;
+	min-height: calc(100vh - 12rem);
+	background: #f9f9f9;
+}
+
+.options {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.option {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--primaryBackground);
+	text-transform: uppercase;
+	font-size: 2rem;
+	border: 2px solid var(--primaryBackground);
+	border-radius: 10px;
+	width: 9rem;
+	height: 5rem;
+	transition: all 0.5s ease-out;
+}
+
+.option:hover {
+	background: var(--primaryBackground);
+	color: var(--primaryText);
+	font-weight: 400;
+}
