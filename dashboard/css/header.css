@@ -1,0 +1,19 @@
+header {
+	height: 7rem;
+	grid-column: 1 / -1;
+	border-bottom: 2px solid var(--primaryBackground);
+}
+
+.stats {
+	width: 100%;
+	height: 100%;
+}
+
+.stats ul {
+	width: 100%;
+	height: 100%;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
