@@ -1,0 +1,9 @@
+@import "./aside.css";
+@import "./main.css";
+@import "./header.css";
+
+.main-container {
+	min-height: calc(100vh - 5rem);
+	display: grid;
+	grid-template-columns: repeat(100, 1fr);
+}
