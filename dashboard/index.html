@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dashboard | SMR</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+			integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./css/index.css" />
+	</head>
+	<body>
+		<header>
+			<section class="stats">
+				<ul>
+					<li class="stat">Trips: <span id="trips"></span></li>
+					<li class="stat">Earnings: <span id="earnings"></span></li>
+					<li class="stat">Spent: <span id="spent"></span></li>
+				</ul>
+			</section>
+		</header>
+		<aside class="side-nav">
+			<nav class="side-nav-items">
+				<ul class="side-nav-list">
+					<li class="side-nav-list-item">
+						<a class="logo" href="#"> SMR </a>
+					</li>
+					<li class="side-nav-list-item">
+						<a href="#">
+							<i class="fa fa-user"></i>
+						</a>
+					</li>
+					<li class="side-nav-list-item">
+						<a href="#">
+							<i class="fa fa-bell"></i>
+						</a>
+					</li>
+					<li class="side-nav-list-item">
+						<a href="#">
+							<i class="fa fa-cog"></i>
+						</a>
+					</li>
+					<li class="side-nav-list-item">
+						<a class="logout" href="#"> LOGOUT </a>
+					</li>
+				</ul>
+			</nav>
+		</aside>
+		<main>
+			<section class="options">
+				<div class="option drive" role="button">Drive</div>
+				<div class="option ride" role="button">Ride</div>
+			</section>
+		</main>
+		<footer>
+			<div class="container">
+				<nav class="sub-nav">
+					<ul class="nav-items">
+						<li class="nav-item">
+							<a href="./about/" class="nav-link">about</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">terms of service</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">privacy policy</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">faq</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">blog</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">help center</a>
+						</li>
+					</ul>
+				</nav>
+				<section class="copy">
+					<p>&copy; <span class="year"></span> Share My Ride</p>
+				</section>
+			</div>
+		</footer>
+		<script>
+			document.querySelector(
+				"span.year"
+			).textContent = ` ${new Date().getFullYear()} `;
+		</script>
+	</body>
+</html>
