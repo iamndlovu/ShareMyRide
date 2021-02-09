@@ -55,6 +55,104 @@
 					<div class="option drive" role="button">Drive</div>
 					<div class="option ride" role="button">Ride</div>
 				</section>
+				<!-- Drive -->
+				<section id="drive" class="hidden bottom">
+					<h3 class="section-heading">Drive</h3>
+					<form action="" method="post" id="ride-form">
+						<div class="details">
+							<!-- start -->
+							<div class="form-group">
+								<label>
+									Start location: <br />
+									<select class="location" name="start" id="start"></select>
+								</label>
+							</div>
+							<!-- destination	-->
+							<div class="form-group">
+								<label>
+									Destination: <br />
+									<select class="location" name="destination" id="destination" required></select>
+								</label>
+							</div>
+							<!-- date	-->
+							<div class="form-group">
+								<label>
+									Departure date &amp; time: <br />
+									<input type="datetime-local" name="departure" required />
+								</label>
+							</div>
+							<!-- luggage	-->
+							<div class="form-group">
+								<label>
+									Do you have space for luggage? <br />
+									<input type="radio" name="luggage" value="plenty" />Yes,
+									plenty <br />
+									<input
+										type="radio"
+										name="luggage"
+										value="moderate"
+										checked
+									/>Yes, moderate <br />
+									<input type="radio" name="luggage" value="little" />Yes, a
+									little <br />
+									<input type="radio" name="luggage" value="no" />No
+								</label>
+							</div>
+						</div>
+						<div class="submit">
+							<input type="submit" value="Submit" />
+						</div>
+					</form>
+				</section>
+				<!-- Ride -->
+				<section id="ride" class="hidden bottom">
+					<h3 class="section-heading">Ride</h3>
+					<form action="" method="post" id="ride-form">
+						<div class="details">
+							<!-- start -->
+							<div class="form-group">
+								<label>
+									Start location: <br />
+									<select class="location" name="start" id="ride-start"></select>
+								</label>
+							</div>
+							<!-- destination	-->
+							<div class="form-group">
+								<label>
+									Destination: <br />
+									<select class="location" name="destination" id="ride-destination" required></select>
+								</label>
+							</div>
+							<!-- date	-->
+							<div class="form-group">
+								<label>
+									Departure date &amp; time: <br />
+									<input type="datetime-local" name="departure" required />
+								</label>
+							</div>
+							<!-- luggage	-->
+							<div class="form-group">
+								<label>
+									Do you have luggage? <br />
+									<input type="radio" name="luggage" value="plenty" />Yes,
+									plenty <br />
+									<input
+										type="radio"
+										name="luggage"
+										value="moderate"
+										checked
+									/>Yes, moderate <br />
+									<input type="radio" name="luggage" value="little" />Yes, a
+									little <br />
+									<input type="radio" name="luggage" value="no" />No
+								</label>
+							</div>
+						</div>
+						<div class="submit">
+							<input type="submit" value="Submit" />
+						</div>
+					</form>
+				</section>
 			</main>
 		</div>
 		<footer>
@@ -91,5 +189,6 @@
 				"span.year"
 			).textContent = ` ${new Date().getFullYear()} `;
 		</script>
+		<script type="module" src="./js/options.js"></script>
 	</body>
 </html>
