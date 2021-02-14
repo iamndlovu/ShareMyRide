@@ -27,7 +27,7 @@
 				<nav class="side-nav-items">
 					<ul class="side-nav-list">
 						<li class="side-nav-list-item">
-							<a class="logo" href="#"> SMR </a>
+							<a class="logo" href="./"> SMR </a>
 						</li>
 						<li class="side-nav-list-item">
 							<a href="#">
@@ -51,58 +51,63 @@
 				</nav>
 			</aside>
 			<main>
-				<section class="toggle options show">
+				<section id="home" class="toggle options show">
 					<div class="option drive" role="button">Drive</div>
 					<div class="option ride" role="button">Ride</div>
 				</section>
 				<!-- Drive -->
-				<section id="drive" class="toggle hidden bottom">
+				<section id="drive" class="toggle column hidden bottom">
+					<i class="back-home fa fa-arrow-left" aria-hidden="true"></i>
 					<h3 class="section-heading">Drive</h3>
 					<form action="" method="post" id="drive-form">
 						<div class="details">
 							<!-- start -->
-							<div class="form-group">
-								<label>
-									Start location: <br />
-									<select class="location" name="start" id="start"></select>
-								</label>
-							</div>
-							<!-- destination	-->
-							<div class="form-group">
-								<label>
-									Destination: <br />
-									<select
-										class="location"
-										name="destination"
-										id="destination"
-										required
-									></select>
-								</label>
-							</div>
-							<!-- date	-->
-							<div class="form-group">
-								<label>
-									Departure date &amp; time: <br />
-									<input type="datetime-local" name="departure" required />
-								</label>
-							</div>
-							<!-- luggage	-->
-							<div class="form-group">
-								<label>
-									Do you have space for luggage? <br />
-									<input type="radio" name="luggage" value="plenty" />Yes,
-									plenty <br />
-									<input
-										type="radio"
-										name="luggage"
-										value="moderate"
-										checked
-									/>Yes, moderate <br />
-									<input type="radio" name="luggage" value="little" />Yes, a
-									little <br />
-									<input type="radio" name="luggage" value="no" />No
-								</label>
-							</div>
+							<section class="row">
+								<div class="form-group">
+									<label>
+										Start location: <br />
+										<select class="location" name="start" id="start"></select>
+									</label>
+								</div>
+								<!-- destination	-->
+								<div class="form-group">
+									<label>
+										Destination: <br />
+										<select
+											class="location"
+											name="destination"
+											id="destination"
+											required
+										></select>
+									</label>
+								</div>
+							</section>
+							<section class="row">
+								<!-- date	-->
+								<div class="form-group">
+									<label>
+										Departure date &amp; time: <br />
+										<input type="datetime-local" name="departure" required />
+									</label>
+								</div>
+								<!-- luggage	-->
+								<div class="form-group">
+									<label>
+										Do you have space for luggage? <br />
+										<input type="radio" name="luggage" value="plenty" />Yes,
+										plenty <br />
+										<input
+											type="radio"
+											name="luggage"
+											value="moderate"
+											checked
+										/>Yes, moderate <br />
+										<input type="radio" name="luggage" value="little" />Yes, a
+										little <br />
+										<input type="radio" name="luggage" value="no" />No
+									</label>
+								</div>
+							</section>
 						</div>
 						<div class="submit">
 							<input type="submit" value="Submit" />
@@ -110,57 +115,62 @@
 					</form>
 				</section>
 				<!-- Ride -->
-				<section id="ride" class="toggle hidden bottom">
+				<section id="ride" class="toggle column hidden bottom">
+					<i class="back-home fa fa-arrow-left" aria-hidden="true"></i>
 					<h3 class="section-heading">Ride</h3>
 					<form action="" method="post" id="ride-form">
 						<div class="details">
-							<!-- start -->
-							<div class="form-group">
-								<label>
-									Start location: <br />
-									<select
-										class="location"
-										name="start"
-										id="ride-start"
-									></select>
-								</label>
-							</div>
-							<!-- destination	-->
-							<div class="form-group">
-								<label>
-									Destination: <br />
-									<select
-										class="location"
-										name="destination"
-										id="ride-destination"
-										required
-									></select>
-								</label>
-							</div>
-							<!-- date	-->
-							<div class="form-group">
-								<label>
-									Departure date &amp; time: <br />
-									<input type="datetime-local" name="departure" required />
-								</label>
-							</div>
-							<!-- luggage	-->
-							<div class="form-group">
-								<label>
-									Do you have luggage? <br />
-									<input type="radio" name="luggage" value="plenty" />Yes,
-									plenty <br />
-									<input
-										type="radio"
-										name="luggage"
-										value="moderate"
-										checked
-									/>Yes, moderate <br />
-									<input type="radio" name="luggage" value="little" />Yes, a
-									little <br />
-									<input type="radio" name="luggage" value="no" />No
-								</label>
-							</div>
+							<section class="row">
+								<!-- start -->
+								<div class="form-group">
+									<label>
+										Start location: <br />
+										<select
+											class="location"
+											name="start"
+											id="ride-start"
+										></select>
+									</label>
+								</div>
+								<!-- destination	-->
+								<div class="form-group">
+									<label>
+										Destination: <br />
+										<select
+											class="location"
+											name="destination"
+											id="ride-destination"
+											required
+										></select>
+									</label>
+								</div>
+							</section>
+							<section class="row">
+								<!-- date	-->
+								<div class="form-group">
+									<label>
+										Departure date &amp; time: <br />
+										<input type="datetime-local" name="departure" required />
+									</label>
+								</div>
+								<!-- luggage	-->
+								<div class="form-group">
+									<label>
+										Do you have luggage? <br />
+										<input type="radio" name="luggage" value="plenty" />Yes,
+										plenty <br />
+										<input
+											type="radio"
+											name="luggage"
+											value="moderate"
+											checked
+										/>Yes, moderate <br />
+										<input type="radio" name="luggage" value="little" />Yes, a
+										little <br />
+										<input type="radio" name="luggage" value="no" />No
+									</label>
+								</div>
+							</section>
 						</div>
 						<div class="submit">
 							<input type="submit" value="Submit" />
