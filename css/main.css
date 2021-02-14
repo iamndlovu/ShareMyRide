@@ -66,7 +66,7 @@ main > section > .container {
 	display: grid;
 	align-content: center;
 	justify-content: center;
-	transition: all 0.9s ease-out;
+	transition: all 0.5s ease-out;
 }
 
 .cta-links > a:first-child {
@@ -76,17 +76,13 @@ main > section > .container {
 	margin-top: 0.7rem;
 }
 
-.cta-links > a:first-child:hover {
-	color: var(--secondaryText);
-	background: var(--secondeyBackground);
-}
-
 .cta-links > a:last-child {
 	color: var(--secondaryText);
 	background: var(--secondeyBackground);
 }
 
-.cta-links > a:last-child:hover {
-	background: var(--primaryBackground);
+.cta-links > a:hover {
+	background: rgb(15, 143, 248);
 	color: var(--primaryText);
+	border: 3px solid transparent;
 }
